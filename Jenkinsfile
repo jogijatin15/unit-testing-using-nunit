@@ -26,7 +26,7 @@ pipeline {
 						sh 'echo "Unit Test Execution Complete"'
 					},
 					Notifications: {
-						sh 'sleep 5'
+						sh 'sleep 10'
 						slackSend color: "78909C", message: "Executing nUnit Test Cases"
 						sh 'sleep 6'
 						slackSend color: "2196F3", message: "*4/4* Test Cases *PASSED*"
