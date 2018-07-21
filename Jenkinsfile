@@ -26,10 +26,10 @@ pipeline {
 						sh 'echo "Unit Test Execution Complete"'
 					},
 					Notifications: {
-						sh 'sleep 10'
+						sh 'sleep 5'
 						slackSend color: "78909C", message: "Executing nUnit Test Cases"
-						sh 'sleep 1'
-						slackSend color: "2196F3", message: "All Test Cases *PASSED*"
+						sh 'sleep 6'
+						slackSend color: "2196F3", message: "*4/4* Test Cases *PASSED*"
 
 						slackSend color: "cceef9", message: "`Unit Test Execution Complete` Job URL: (<${env.BUILD_URL}|Open>)"
             slackSend color: "cceef9", message: "`Destroying Docker container`"
